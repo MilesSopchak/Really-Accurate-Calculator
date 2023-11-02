@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Really Accurate Calculator", "Really Accurate Calculator\Really Accurate Calculator.vcxproj", "{D7FF1D11-80A2-4969-86DD-C1FE0D99F426}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7FF1D11-80A2-4969-86DD-C1FE0D99F426}.Debug|x64.ActiveCfg = Debug|x64
+		{D7FF1D11-80A2-4969-86DD-C1FE0D99F426}.Debug|x64.Build.0 = Debug|x64
+		{D7FF1D11-80A2-4969-86DD-C1FE0D99F426}.Debug|x86.ActiveCfg = Debug|Win32
+		{D7FF1D11-80A2-4969-86DD-C1FE0D99F426}.Debug|x86.Build.0 = Debug|Win32
+		{D7FF1D11-80A2-4969-86DD-C1FE0D99F426}.Release|x64.ActiveCfg = Release|x64
+		{D7FF1D11-80A2-4969-86DD-C1FE0D99F426}.Release|x64.Build.0 = Release|x64
+		{D7FF1D11-80A2-4969-86DD-C1FE0D99F426}.Release|x86.ActiveCfg = Release|Win32
+		{D7FF1D11-80A2-4969-86DD-C1FE0D99F426}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB3AC9CC-1F5B-4944-A46C-DF73EDA754DB}
+	EndGlobalSection
+EndGlobal
