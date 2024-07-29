@@ -1,5 +1,7 @@
 #include <iostream>
+#include <fstream>
 #include <string>
+#include <vector>
 
 struct NonNumericInput : std::exception
 {
@@ -37,20 +39,28 @@ class Number
 {
 private:
 	const char acceptedCharacters[11] = {'0','1','2','3','4','5','6','7','8','9'};
-	std::string number;
+	static std::ofstream Numbers;
+	static size_t GID;
 	bool isNegative;
-	size_t dotLoc;
+	size_t ID;
+	void* number;
+	void* dotLoc;
+	void* size;
+	
 
 public:
 	Number()
 	{
-		number = "0.";
-		isNegative = false;
-		dotLoc = 1;
+		std::printf("eee");
+		GID += 1;
+		ID = GID;
+		printf("eeeee%zu",GID);
 	}
 
 	Number(std::string n)
 	{
+		std::printf("eee");
+		/*
 		if (n.size() == 0)
 		{
 			number = "0.";
@@ -102,10 +112,12 @@ public:
 			isNegative = false;
 		}
 		dotLoc = findDot();
+		*/
 	}
 
 	std::string print()
 	{
+		/*
 		std::string n = number;
 		if (n[0] == '.')
 		{
@@ -120,22 +132,21 @@ public:
 			n.insert(0, "-");
 		}
 		return n;
+		*/
 	}
 
 	void copy(Number* n)
 	{
+		/*
 		number = n->number;
 		isNegative = n->isNegative;
 		dotLoc = n->dotLoc;
-	}
-
-	size_t getNumOfDigits()
-	{
-		return number.size() - 1;
+		*/
 	}
 
 	int compare(Number* n)
 	{
+		/*
 		if (isNegative ^ n->isNegative)
 		{
 			if (isNegative)
@@ -176,10 +187,12 @@ public:
 			}
 		}
 		return 0;
+		*/
 	}
 
 	void add(Number* n)
 	{
+		/*
 		if (isNegative ^ n->isNegative)
 		{
 			n->isNegative = !n->isNegative;
@@ -213,10 +226,12 @@ public:
 		number = cleanString(number,true);
 		n->number = cleanString(n->number, true);
 		dotLoc = findDot();
+		*/
 	}
 
 	void subtract(Number* n)
 	{
+		/*
 		if (this->compare(n) == 0)
 		{
 			number = "0.";
@@ -277,10 +292,12 @@ public:
 		number = cleanString(number, true);
 		n->number = cleanString(n->number, true);
 		dotLoc = findDot();
+		*/
 	}
 
 	void multiply(Number* n)
 	{
+		/*
 		if (number == "0." || n->number == "0.")
 		{
 			number = "0.";
@@ -350,10 +367,12 @@ public:
 		copy(&product);
 		number = cleanString(number, true);
 		dotLoc = findDot();
+		*/
 	}
 
 	void divide(Number* n, size_t SigFigs)
 	{
+		/*
 		if (SigFigs == 0)
 		{
 			throw InsufficentSignificantFigures();
@@ -468,10 +487,12 @@ public:
 		{
 
 		}
+		*/
 	}
 
 	void round(size_t places, bool left)
 	{
+		/*
 		if (places == 0)
 		{
 			throw InsufficentSignificantFigures();
@@ -520,6 +541,7 @@ public:
 		}
 		cleanString(number, true);
 		dotLoc = findDot();
+		*/
 	}
 
 	void power(Number* n)
@@ -566,6 +588,7 @@ private:
 
 	std::string reverse(std::string n)
 	{
+		/*
 		for (int i = 0; i < (n.size() / 2); i++)
 		{
 			char t = n[i];
@@ -573,10 +596,12 @@ private:
 			n[n.size() - (i + 1)] = t;
 		}
 		return n;
+		*/
 	}
 
 	size_t findDot()
 	{
+		/*
 		for (size_t i = 0; i < number.size(); i++)
 		{
 			if (number[i] == '.')
@@ -585,10 +610,12 @@ private:
 			}
 		}
 		throw DecimalPointNotFound();
+		*/
 	}
 
 	void evenSigFigs(Number* N1, Number* N2)
 	{
+		/*
 		int N1Size = N1->number.size();
 		int N2Size = N2->number.size();
 		for (int i = 0; i < ((int)(N2->dotLoc) - (int)N1->dotLoc); i++)
@@ -607,6 +634,7 @@ private:
 		{
 			N2->number.append("0");
 		}
+		*/
 	}
 };
 
